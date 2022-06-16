@@ -68,7 +68,7 @@ def main()
              
                 for usertag in soup.find_all('div', {'class' 'users-list'  })
                     for goldtag in usertag.find_all('div', {'class' 'colored gold username' })
-                        users.write('ru.stripchat.com/user')
+                        users.write('сайт')
                         users.write(goldtag.text)
                         users.write('n')
                         k = k+1
@@ -77,14 +77,14 @@ def main()
 
                 for usertag in soup.find_all('div', {'class' 'users-list'  })
                     for greentag in usertag.find_all('div', {'class' 'colored green username' })
-                        users.write('ru.stripchat.com/user')
+                        users.write('сайт')
                         users.write(greentag.text)
                         users.write('n')
                         k= k +1
                         
                      
                 d.find_element_by_css_selector('#app  div  div  div  div.header-sub.view-cam-header-sub  div  nav.nav-right  div.next-model-button  span').click() #next model button 
-                WebDriverWait(d, delay).until(EC.presence_of_element_located((By.XPATH, [contains(text(), 'Похожие модели')])))
+                WebDriverWait(d, delay).until(EC.presence_of_element_located((By.XPATH, [contains(text(), 'Похожие стримеры')])))
 
                 if k 50
                         site = d.current_url
@@ -153,7 +153,7 @@ def main()
                             for span2 in div.find_all('span')
                                 
                                 if span2.find_all('span', {'class' 'user-status-icon online' })
-                                     online.write('httpsru.stripchat.com')
+                                     online.write('ссылка на сайт')
                                      online.write(a.get('href'))
                                      online.write('n')
 
@@ -183,7 +183,7 @@ def main()
                      try
                          WebDriverWait(d, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, '#app  div  div  div  div  div  div.column.xs-12.s-12.m-12.l-7.xl-7.xxl-7  div  div  div.info  div.action-buttons  div  a'))).click() 
                          send = WebDriverWait(d, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, #app  div  div  div  div  div.private-messages.span-7  div  div.composer  div  div.textarea-container  div.textarea-wrapper  textarea))) 
-                         send.send_keys('mmmm make me cum pls!')
+                         send.send_keys('Захоид ко мне!!')
                          WebDriverWait(d, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, #private_messages_composer_uid_1))).click()
 
                                                 
